@@ -35,6 +35,7 @@ DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 ALLOWED_HOSTS = [
     'http://localhost:3000',
     'http://localhost:8000',
+    'http://104.248.18.158',
 ]
 
 
