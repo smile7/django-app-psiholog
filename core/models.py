@@ -55,6 +55,17 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+class Contact(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    subject = models.CharField(max_length=200)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
+
+
 """ class Blogadmin(SummernoteModelAdmin):
     list_display = ('title', 'slug', 'status', 'created_on')
     list_filter = ("status", )

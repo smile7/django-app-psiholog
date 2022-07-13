@@ -1,7 +1,7 @@
 # serializers convert model instances to JSON so that the frontend can work with the received data
 
 from rest_framework import serializers
-from .models import Post, Deinosti, Step, Gallery, Certificate, Phase
+from .models import Post, Deinosti, Step, Gallery, Certificate, Phase, Contact
 
 class DeinostiSerializer(serializers.ModelSerializer):
 
@@ -37,4 +37,11 @@ class PostSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Post
-        fields = ("title", "slug", "updated_on", "content", "created_on", "image")
+        fields = ("id", "title", "slug", "updated_on", "content", "created_on", "image")
+
+
+class ContactSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Contact
+        fields = ("name", "phone", "email", "subject", "message")

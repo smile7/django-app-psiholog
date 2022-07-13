@@ -17,13 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from contact import views as contact_views
+# from core import views as contact_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/", include('core.urls')),
     path('summernote/', include('django_summernote.urls')),
-    path('contact/', contact_views.contact_view, name='contact'),
+    # path('contact/', contact_views.contact_view, name='contact'),
 ]
 
 if settings.DEBUG:

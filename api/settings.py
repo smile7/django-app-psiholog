@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'core',
-    'contact'
 ]
 INSTALLED_APPS += ('django_summernote', )
 
@@ -135,12 +134,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # EMAIL CONFIGURATION (for contact form)
-""" EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.mail.com'
-EMAIL_HOST_USER = 'silvenaa@mail.com'
-EMAIL_HOST_PASSWORD = 'Ttruistno1'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mail.yahoo.com'
+EMAIL_HOST_USER = 'sisitymiteva@yahoo.com'
+EMAIL_HOST_PASSWORD = 'mcpvcchwrgvuzfks'
 EMAIL_PORT = 587
-EMAIL_USE_TLS = True """
+EMAIL_USE_TLS = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
