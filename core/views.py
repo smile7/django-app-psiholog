@@ -29,6 +29,7 @@ class PhaseViewSet(viewsets.ModelViewSet):
 class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     queryset = Post.objects.all()
+    lookup_field = 'slug'
 
 class ContactViewSet(viewsets.ModelViewSet):
     serializer_class = ContactSerializer
