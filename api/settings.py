@@ -148,7 +148,12 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
+# DATE_FORMAT = "Y-m-d"
+DATE_INPUT_FORMATS = ['%d-%m-%Y']
+
 USE_I18N = True
+
+USE_L10N = False
 
 USE_TZ = True
 
@@ -160,7 +165,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # allows to load iframe from same hostname
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
