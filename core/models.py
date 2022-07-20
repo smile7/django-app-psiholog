@@ -28,11 +28,11 @@ class Step(models.Model):
     description = models.TextField()
 
 class Gallery(models.Model):
-    image = models.FileField()
+    url = models.FileField()
 
 class Certificate(models.Model):
     title = models.CharField(max_length=80)
-    image = models.FileField()
+    url = models.FileField()
 
 class Phase(models.Model):
     title = models.CharField(max_length=50)

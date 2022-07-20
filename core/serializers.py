@@ -19,13 +19,13 @@ class GallerySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Gallery
-        fields = ("image",)
+        fields = ("url",)
 
 class CertificateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Certificate
-        fields = ("title", "image")
+        fields = ("title", "url")
 
 class PhaseSerializer(serializers.ModelSerializer):
 
