@@ -1,6 +1,7 @@
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 import os
+from dotenv import load_dotenv, find_dotenv
 #import sys
 #import dj_database_url
 
@@ -11,9 +12,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-c*a6u_c_^9fp5s!fv&4su^ffpcid-9o4-*)*&7%ez6xvh(cp_)'
-#SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
+load_dotenv(find_dotenv())
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -23,6 +23,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'http://localhost',
     'http://104.248.18.158',
+    'http://petya-dimova.senatechs.com',
+    'https://petya-dimova.senatechs.com',
     '*'
 ]
 
@@ -125,6 +127,11 @@ EMAIL_HOST_USER = 'sisitymiteva@yahoo.com'
 EMAIL_HOST_PASSWORD = 'mcpvcchwrgvuzfks'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+# Avoid transmitting the CSRF and session cookies over HTTP accidentally
+# UNCOMMENT WHEN REDIRECT FROM HTTP TO HTTPS IS DONE
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
