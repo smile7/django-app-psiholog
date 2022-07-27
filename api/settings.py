@@ -18,13 +18,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #DEBUG = os.getenv("DEBUG", "False") == "True"
-<<<<<<< HEAD
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '104.248.18.158',
-=======
 #DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 ALLOWED_HOSTS = [
@@ -33,7 +27,6 @@ ALLOWED_HOSTS = [
     'http://petya-dimova.senatechs.com',
     'https://petya-dimova.senatechs.com',
     '*'
->>>>>>> 043d7383b40718ba194aa0a40474b710d0554995
 ]
 
 INSTALLED_APPS = [
@@ -60,7 +53,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-<<<<<<< HEAD
 # CORS_ORIGIN_WHITELIST = (
   #  'http://localhost:3000',
  #   'http://localhost:8000',
@@ -69,14 +61,6 @@ MIDDLEWARE = [
 # )
 CORS_ALLOW_ALL_ORIGINS = True
 # CORS_ALLOWED_ORIGIN = ['http://104.248.18.158']
-=======
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-    'http://localhost:8000',
-    'http://104.248.18.158'
-)
->>>>>>> 043d7383b40718ba194aa0a40474b710d0554995
-
 ROOT_URLCONF = 'api.urls'
 
 TEMPLATES = [
@@ -101,19 +85,7 @@ WSGI_APPLICATION = 'api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-<<<<<<< HEAD
-"""
-if DEVELOPMENT_MODE is True:
-=======
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 """ if DEVELOPMENT_MODE is True:
->>>>>>> 043d7383b40718ba194aa0a40474b710d0554995
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
@@ -126,7 +98,6 @@ elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
         raise Exception("DATABASE_URL environment variable not defined")
     DATABASES = {
         "default": dj_database_url.parse(os.environ.get("DATABASE_URL")),
-<<<<<<< HEAD
     }
 """
 
@@ -140,9 +111,6 @@ DATABASES = {
         'PORT': '',
     }
 }
-=======
-    } """
->>>>>>> 043d7383b40718ba194aa0a40474b710d0554995
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
