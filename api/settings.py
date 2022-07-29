@@ -104,9 +104,9 @@ elif len(sys.argv) > 0 and sys.argv[1] != 'collectstatic':
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
+        'NAME': 'petyadb',
+        'USER': 'admin',
+        'PASSWORD': 'B3NzaC1yc2',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -158,7 +158,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_URL = '/media/'
